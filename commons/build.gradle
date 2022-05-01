@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+apply from: "$rootProject.projectDir/scripts/module.gradle"
+apply from: "$rootProject.projectDir/scripts/default_dependencies.gradle"
+
+android {
+    buildFeatures {
+        dataBinding = true
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs += [
+                '-Xjvm-default=enable'
+        ]
+    }
+}
+
+
+dependencies {
+    implementation project(':domain')
+    implementation libraries.fragment
+    implementation libraries.navigation
+    implementation libraries.material
+    implementation libraries.gson
+}

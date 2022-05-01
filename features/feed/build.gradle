@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootProject.projectDir/scripts/feature_module.gradle"
+
+dependencies {
+    implementation libraries.glide
+    implementation libraries.circleImageView
+
+    kapt annotationProcessors.glideCompiler
+
+}
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Alpha colors
+
+    100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00
+
+    -->
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue1">#3A88D3</color>
+
+    <color name="colorPrimary">#7CC6FB</color>
+    <color name="colorPrimaryLight">#DDEBF5</color>
+    <color name="colorPrimaryDark">#046DB3</color>
+    <color name="colorAccent">#fff</color>
+
+    <!-- App Colors with opacity -->
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="colorPrimary_10">#1A7CC6FB</color>
+    <color name="colorPrimary_15">#267CC6FB</color>
+    <color name="colorPrimary_30">#337CC6FB</color>
+    <color name="colorPrimary_20">#337CC6FB</color>
+    <color name="colorAccent_50">#807CC6FB</color>
+    <!-- ./ App Colors with opacity -->
+
+
+    <!-- Main Colors -->
+    <color name="mainTextColor">@color/white</color>
+    <color name="mainTextLighterColor">#3A88D3</color>
+    <color name="mainTextDarkColor">#3A3937</color>
+    <color name="mainBlackColor">#2D3344</color>
+    <color name="mainBlackColor_50">#802D3344</color>
+    <color name="mainBlackColor_10">#1A2D3344</color>
+    <color name="mainRedColor">#EC5128</color>
+    <color name="mainBlueColor">#007AFF</color>
+    <color name="mainStrokeColor">#8D949D</color>
+    <color name="mainDarkGrayColor">#8D949D</color>
+    <color name="mainGrayBackgroundColor">#E7E8F2</color>
+    <color name="mainExplanationTextColor">#8D949D</color>
+    <color name="mainDisabledColor">#BDBDBD</color>
+    <color name="mainDisabledColor_20">#33ADB2BA</color>
+    <color name="mainUncompletedColor">#FF822C</color>
+    <color name="softgray">#FAFAFA</color>
+    <color name="mainBackground">@color/white</color>
+    <color name="greyLight">#EDEDED</color>
+    <!-- ./ Main Colors -->
+
+    <color name="mainErrorColor">@color/mainRedColor</color>
+
+    <color name="editTextUnderlineColor">#C6CEDD</color>
+    <color name="editTextUnderlineColor_50">#80C6CEDD</color>
+
+    <color name="warning_orange_color">#F59741</color>
+
+    <color name="digitCodeItemStrokeColor">@color/mainStrokeColor</color>
+    <color name="digitErrorCodeItemStrokeColor">#EC5128</color>
+
+    <!-- Button Colors -->
+    <color name="disabledButtonBackgroundColor">#804F95D0</color>
+    <color name="holdButtonProgressColor">#999CA6</color>
+    <!-- ./ Button Colors -->
+
+    <!--    Background Colors   -->
+    <color name="lightBlueBackground">#F5FBFF</color>
+    <color name="darkerBlueBackground">#E3F0F9</color>
+
+</resources>

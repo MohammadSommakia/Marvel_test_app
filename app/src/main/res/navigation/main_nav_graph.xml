@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/main_nav_graph"
+    app:startDestination="@id/feed_nav">
+    <include app:graph="@navigation/feed_nav" />
+    <include app:graph="@navigation/message_dialog_nav" />
+
+<!--    <action-->
+<!--        android:id="@id/action_global_messageDialogFragment"-->
+<!--        app:destination="@+id/message_dialog_nav">-->
+
+<!--        <argument-->
+<!--            android:name="message"-->
+<!--            app:argType="io.healios.commons.ui.messagedialog.models.MessageDialog" />-->
+
+<!--    </action>-->
+
+
+</navigation>

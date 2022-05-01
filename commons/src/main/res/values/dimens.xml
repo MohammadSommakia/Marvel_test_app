@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="all_buttons_bottom_margin">48dp</dimen>
+
+    <!--    Normal Avatar   -->
+    <dimen name="height_accountDetails_avatar">120dp</dimen>
+    <dimen name="width_accountDetails_avatar">@dimen/height_accountDetails_avatar</dimen>
+    <dimen name="radius_accountDetails_avatar">60dp</dimen>
+
+    <!--    Small Avatar    -->
+    <dimen name="height_accountDetails_avatar_small">80dp</dimen>
+    <dimen name="width_accountDetails_avatar_small">@dimen/height_accountDetails_avatar_small
+    </dimen>
+    <dimen name="radius_accountDetails_avatar_small">40dp</dimen>
+
+    <dimen name="cornerRadius_all_general">20dp</dimen>
+
+
+    <dimen name="elevation_all_toolbar">4dp</dimen>
+
+    <dimen name="boxStrokeWidth_all_textInputLayout">16dp</dimen>
+
+    <!-- Main Button Dimens -->
+    <dimen name="height_all_mainButton">56dp</dimen>
+    <dimen name="marginStart_all_mainButton">20dp</dimen>
+    <dimen name="marginEnd_all_mainButton">@dimen/marginStart_all_mainButton</dimen>
+    <dimen name="marginTop_all_mainButton">30dp</dimen>
+    <dimen name="marginBottom_all_mainButton">34dp</dimen>
+    <dimen name="height_dialog_open_third_party_app_default">280dp</dimen>
+    <!-- ./ Main Button Dimens -->
+
+    <!-- NON-Completed Challenges -->
+    <dimen name="cornerRadius_non_completed_challenges">5dp</dimen>
+    <!-- ./NON-Completed Challenges -->
+
+    <!-- If we want the same size of bottom navigation text -->
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
+
+    <dimen name="borderWidth_challenge_icon">4dp</dimen>
+    <dimen name="challenge_instruction_item_padding">16dp</dimen>
+    <dimen name="about_fragment_vertical_distance">16dp</dimen>
+    <dimen name="terms_and_conditions_margin">16dp</dimen>
+    <dimen name="swipe_button_text_size">12sp</dimen>
+    <dimen name="swipe_button_icon_width">40dp</dimen>
+    <dimen name="swipe_button_icon_height">40dp</dimen>
+    <dimen name="swipe_button_width">120dp</dimen>
+
+    <!--    Profile     -->
+    <dimen name="all_avatar_stroke_width">1dp</dimen>
+
+
+</resources>

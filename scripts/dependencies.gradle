@@ -1,0 +1,172 @@
+ext {
+
+    versions = [
+            minSdkVersion         : 24,
+            compileSdkVersion     : 31,
+            targetSdkVersion      : 30,
+            buildToolsVersion     : "30.0.3",
+            appCompatVersion      : "1.2.0",
+            material              : "1.4.0-alpha02",
+            kotlin                : "1.6.20",
+            lifecycleVersion      : "2.4.1",
+            fragmentVersion       : "1.3.2",
+            constraintLayoutVesion: "2.0.4",
+            cardViewVersion       : "1.0.0",
+            recyclerViewVersion   : "1.2.0",
+            roomVersion           : "2.3.0-alpha02",
+            roomDebugVersion      : "1.0.6",
+            daggerVersion         : "2.38.1",
+            okHttpVersion         : "4.9.0",
+            retrofitVersion       : "2.9.0",
+            gsonVersion           : "2.8.7",
+            picassoVersion        : "2.71828",
+            coroutinesVersion     : "1.5.2",
+            timberVersion         : "4.7.1",
+            jUnitVersion          : "5.6.2",
+            espressoVersion       : "3.2.0",
+            mockkVersion          : "1.12.0",
+            kluentVersion         : "1.67",
+            archCoreVersion       : "2.1.0",
+            databinding           : "4.1.3",
+            androidxRules         : "1.1.0",
+            viewPager2            : "1.0.0",
+            workManager           : "2.7.1"
+    ]
+
+
+    libraries = [
+            /**
+             * Android libraries
+             */
+            appCompat            : "androidx.appcompat:appcompat:${versions.appCompatVersion}",
+            recyclerView         : "androidx.recyclerview:recyclerview:${versions.recyclerViewVersion}",
+            cardView             : "androidx.cardview:cardview:${versions.cardViewVersion}",
+            constraintLayout     : "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVesion}",
+            multixDex            : "androidx.multidex:multidex:2.0.1",
+            fragment             : "androidx.fragment:fragment-ktx:${versions.fragmentVersion}",
+            material             : "com.google.android.material:material:${versions.material}",
+            /**
+             * Jetpack
+             */
+            navigation           : [
+                    "androidx.navigation:navigation-fragment-ktx:$nav_version",
+                    "androidx.navigation:navigation-ui-ktx:$nav_version"
+            ],
+
+            room                 : [
+                    "androidx.room:room-runtime:${versions.roomVersion}",
+                    "androidx.room:room-ktx:${versions.roomVersion}",
+
+
+            ],
+
+            roomDebug            : [
+                    "com.amitshekhar.android:debug-db:${versions.roomDebugVersion}"
+            ],
+
+            livedata             : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleVersion}",
+            viewModel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}",
+
+            lifecycle            : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycleVersion}",
+            lifecycleOwnerService: "androidx.lifecycle:lifecycle-service:${versions.lifecycleVersion}",
+            lifecycleOwnerProcess: "androidx.lifecycle:lifecycle-process:${versions.lifecycleVersion}",
+
+            /**
+             * Kotlin
+             */
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
+            coroutines           : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutinesVersion}",
+
+            /**
+             * Dagger
+             */
+            dagger               : [
+                    "com.google.dagger:dagger:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android-support:${versions.daggerVersion}"
+            ],
+            daggerCore           : "com.google.dagger:dagger:${versions.daggerVersion}",
+
+            /**
+             * OkHttp
+             */
+            okHttp               : [
+                    "com.squareup.okhttp3:okhttp:${versions.okHttpVersion}",
+                    "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}"
+            ],
+
+            okHttpLogger         : "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}",
+
+            /**
+             * Retrofit & Gson
+             */
+            retrofit             : [
+                    "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+                    "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}"
+            ],
+            gson                 : "com.google.code.gson:gson:${versions.gsonVersion}",
+
+
+            /**
+             * ViewPager 2
+             */
+            viewPager2           : "androidx.viewpager2:viewpager2:${versions.viewPager2}",
+
+            /**
+             * workManager
+             */
+            workManager          : "androidx.work:work-runtime-ktx:${versions.workManager}",
+
+            /**
+             * paging
+             */
+
+            paging               : "androidx.paging:paging-runtime:3.1.0",
+
+            /**
+             *  Glide
+             */
+
+            glide                : "com.github.bumptech.glide:glide:4.13.0",
+
+            /**
+             *  circleImageView
+             */
+
+            circleImageView      : "de.hdodenhof:circleimageview:3.1.0",
+
+
+    ]
+
+    annotationProcessors = [
+            roomCompiler  : "androidx.room:room-compiler:${versions.roomVersion}",
+            daggerCompiler: [
+                    "com.google.dagger:dagger-compiler:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android-processor:${versions.daggerVersion}",
+            ]
+            ,
+            glideCompiler : "com.github.bumptech.glide:compiler:4.13.0"
+    ]
+
+    testLibraries = [
+            jUnitApi               : "org.junit.jupiter:junit-jupiter-api:${versions.jUnitVersion}",
+            jUnitEngine            : "org.junit.jupiter:junit-jupiter-engine:${versions.jUnitVersion}",
+            jUnitVintage           : "org.junit.vintage:junit-vintage-engine:${versions.jUnitVersion}",
+            jUnitAndroid           : "androidx.test.ext:junit:1.1.0",
+            fragmentTest           : "androidx.fragment:fragment-testing:${versions.fragmentVersion}",
+            multidexInstrumentation: "androidx.multidex:multidex-instrumentation:2.0.0",
+            coroutinesCore         : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutinesVersion}",
+            coroutinesTest         : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutinesVersion}",
+            espresso               : [
+                    "androidx.test.espresso:espresso-core:${versions.espressoVersion}",
+                    "androidx.test.espresso:espresso-contrib:${versions.espressoVersion}",
+            ],
+            mockk                  : "io.mockk:mockk:${versions.mockkVersion}",
+            androidMockk           : "io.mockk:mockk-android:${versions.mockkVersion}",
+            kluent                 : "org.amshove.kluent:kluent-android:${versions.kluentVersion}",
+            archCore               : "androidx.arch.core:core-testing:${versions.archCoreVersion}",
+            databinding            : "androidx.databinding:databinding-compiler:${versions.databinding}",
+            androidxRules          : "androidx.test:runner:${versions.androidxRules}",
+            navigation             : "androidx.navigation:navigation-testing:$nav_version"
+    ]
+}

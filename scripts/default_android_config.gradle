@@ -1,0 +1,71 @@
+
+
+
+/***
+ * These fields are used for the automation of the versioning scheme.
+ * See the following links for reference:
+ *  - Semantic Versioning 2.0.0: https://semver.org/
+ *  - Versioning Android Apps: https://medium.com/dipien/versioning-android-apps-d6ec171cfd82
+ */
+apply from: "$rootProject.projectDir/scripts/dependencies.gradle"
+
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 0
+ext.versionClassifier = null
+ext.isSnapshot = true
+ext.minimumSdkVersion = versions.targetSdkVersion
+
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        noStdlib = true
+    }
+}
+
+/**
+ * This method generates the version code
+ * @return Version Code: Int
+ */
+private  Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+/**
+ * This method generates the version name and appends the ext.versionClassifier if the version is pre-release version
+ * @return Version Name: String
+ */
+private  String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+    if (ext.versionClassifier == null && ext.isSnapshot) {
+        ext.versionClassifier = "SNAPSHOT"
+    }
+
+    if (ext.versionClassifier != null) {
+        versionName += "-" + ext.versionClassifier
+    }
+    return versionName
+}

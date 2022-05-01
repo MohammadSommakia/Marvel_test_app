@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Mylivn.AllScreenTitleText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllAboutTitleText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_bold</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllScreenDescText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_bold</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllScreenDateText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllEditTextLabel">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_bold</item>
+    </style>
+
+    <style name="Theme.Mylivn.PersonalInformationNicknameEditText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_book</item>
+        <item name="android:backgroundTint">@color/editTextUnderlineColor</item>
+
+        <!-- underline color-->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent_50</item>
+        <item name="colorControlHighlight">@color/colorAccent_50</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllExplanationText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/mainExplanationTextColor</item>
+        <item name="android:fontFamily">@font/circularstd_book</item>
+    </style>
+
+    <style name="Theme.Mylivn.AllErrorText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/mainErrorColor</item>
+        <item name="android:fontFamily">@font/circularstd_book</item>
+    </style>
+
+
+
+    <style name="Theme.Nexus.AllScreenTitleText.Top" parent="Theme.Mylivn.AllScreenTitleText">
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="Theme.Nexus.ToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+    <style name="Theme.Nexus.Title.TextView" parent="Theme.Mylivn">
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:fontFamily">@font/circularstd</item>
+    </style>
+
+
+    <style name="Theme.Mylivn.WarningText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <style name="Theme.Mylivn.WarningText.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontWeight">800</item>
+    </style>
+
+
+
+</resources>

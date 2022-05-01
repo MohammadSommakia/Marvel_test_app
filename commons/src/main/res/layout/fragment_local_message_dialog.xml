@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="iconResource"
+            type="Integer" />
+
+        <variable
+            name="message"
+            type="com.mylivn.commons.ui.messagedialog.models.MessageDialog" />
+
+        <variable
+            name="mainAction"
+            type="com.mylivn.commons.ui.messagedialog.models.MessageDialogAction" />
+
+        <variable
+            name="secondaryAction"
+            type="com.mylivn.commons.ui.messagedialog.models.MessageDialogAction" />
+
+        <variable
+            name="actionHandler"
+            type="com.mylivn.commons.ui.messagedialog.models.MessageActionHandler" />
+
+        <import type="android.view.View" />
+
+        <import type="com.mylivn.commons.ui.messagedialog.models.MessageDialogIcon" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_all_dialog">
+
+
+        <ImageView
+            android:id="@+id/image_message_dialog_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:visibility="@{message.icon == MessageDialogIcon.NONE ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:src="@{iconResource}" />
+
+        <TextView
+            android:id="@+id/textview_message_dialog_title"
+            style="@style/Theme.Mylivn.AllScreenTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@{message.title}"
+            android:visibility="@{message.title == null ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_message_dialog_icon"
+            tools:text="Are you sure" />
+
+        <TextView
+            android:id="@+id/textview_message_dialog_body"
+            style="@style/Theme.Mylivn.Dialogs.ExplanationText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="@{message.bodyTextGravity, default=center}"
+            android:lineSpacingExtra="8dp"
+            android:text="@{message.body}"
+            android:textColor="@color/mainTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_message_dialog_title"
+            tools:text="Are you sure you want to exit?" />
+
+        <Button
+            android:id="@+id/button_message_dialog_secondary_action"
+            style="@style/Theme.Mylivn.Dialog.Yes.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="@{() -> actionHandler.executeSecondaryAction()}"
+            android:text="@{secondaryAction.title}"
+            android:visibility="@{secondaryAction == null ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_message_dialog_main_action"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_message_dialog_body"
+            tools:text="No" />
+
+        <Button
+            android:id="@+id/button_message_dialog_main_action"
+            style="@style/Theme.Mylivn.Dialog.No.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="@{() -> actionHandler.executeMainAction()}"
+            android:text="@{mainAction.title}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_message_dialog_secondary_action"
+            app:layout_constraintTop_toBottomOf="@+id/textview_message_dialog_body"
+            tools:text="Yes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

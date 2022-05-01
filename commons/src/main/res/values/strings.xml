@@ -1,0 +1,4 @@
+    <resources>
+        <string name="error_dialog_button_ok" translatable="false">OK</string>
+        <string name="error_dialog_default_unauthorized">Session Expired!</string>
+    </resources>

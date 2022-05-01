@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootProject.projectDir/scripts/module.gradle"
+apply from: "$rootProject.projectDir/scripts/default_dependencies.gradle"
+
+dependencies {
+    implementation project(':commons')
+    implementation project(':domain')
+    implementation libraries.navigation
+    implementation libraries.okHttpLogger
+    implementation libraries.coroutines
+    implementation libraries.retrofit
+    implementation libraries.gson
+    implementation libraries.workManager
+
+    api libraries.room
+    api libraries.paging
+    kapt annotationProcessors.roomCompiler
+
+    testImplementation testLibraries.coroutinesCore
+    testImplementation testLibraries.coroutinesTest
+}

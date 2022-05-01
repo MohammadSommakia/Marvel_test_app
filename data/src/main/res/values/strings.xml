@@ -1,0 +1,7 @@
+<resources>
+    <string name="reason_generic">Something went wrong</string>
+    <string name="reason_network">Check your internet connection</string>
+    <string name="reason_response">Server error</string>
+    <string name="reason_timeout">Server timed out</string>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Mylivn.Dialogs.ExplanationText" parent="Theme.Mylivn">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/mainBlackColor</item>
+        <item name="android:fontFamily">@font/circularstd_book</item>
+    </style>
+
+    <style name="Theme.Mylivn.MessageDialogTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/mainBlackColor</item>
+        <item name="android:fontFamily">@font/circularstd_medium</item>
+    </style>
+
+    <style name="Theme.Mylivn.Dialog.Button" parent="Theme.Mylivn.Button.Borderless">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Theme.Mylivn.Dialog.Yes.Button" parent="Theme.Mylivn.Button.Borderless">
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:background">@drawable/all_mainbuttonbackgroundselector</item>
+        <item name="backgroundTint">@color/colorPrimaryLight</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Theme.Mylivn.Dialog.No.Button" parent="Theme.Mylivn.Button.Borderless">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/all_mainbuttonbackgroundselector</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Theme.Mylivn.DialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="Theme.Mylivn.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/circularstd_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

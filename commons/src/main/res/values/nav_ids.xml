@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    Nav Host Fragment   -->
+    <item name="main_nav_host_fragment" type="id" />
+
+    <!--    Nav Graphs    -->
+    <item name="main_nav_graph" type="id" />
+
+    <!--    Message Dialog Global Action    -->
+    <item name="action_global_messageDialogFragment" type="id" />
+
+    <!--    Surveys Global Action   -->
+    <item name="action_global_surveyFragment" type="id" />
+
+    <!--    Report Relapse Global Action    -->
+    <item name="action_global_reportRelapse" type="id" />
+
+</resources>

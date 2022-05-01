@@ -1,0 +1,48 @@
+android {
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+        androidTest.java.srcDirs += "src/androidTest/kotlin"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            testCoverageEnabled = true
+            debuggable = true
+        }
+    }
+
+    flavorDimensions 'API'
+    productFlavors {
+
+        production {
+            dimension 'API'
+            buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/"'
+            buildConfigField "String", "PUBLIC_API_KEY", 'ff08da69abfc0f47988c5f4bcb846ed6"'
+            buildConfigField "String", "PRIVATE_API_KEY", '95423df70bb4c0006fd5efea9f570ad0e79c3c79"'
+        }
+
+        dev {
+            dimension 'API'
+            buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/"'
+            buildConfigField "String", "PUBLIC_API_KEY", '"ff08da69abfc0f47988c5f4bcb846ed6"'
+            buildConfigField "String", "PRIVATE_API_KEY", '"95423df70bb4c0006fd5efea9f570ad0e79c3c79"'
+        }
+    }
+}

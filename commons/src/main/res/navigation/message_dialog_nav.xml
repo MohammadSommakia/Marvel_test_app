@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_dialog_nav"
+    app:startDestination="@id/messageDialogFragment">
+
+    <dialog
+        android:id="@+id/messageDialogFragment"
+        android:name="com.mylivn.commons.ui.messagedialog.MessageDialogFragment"
+        android:label="MessageDialogFragment">
+        <argument
+            android:name="message"
+            app:argType="com.mylivn.commons.ui.messagedialog.models.MessageDialog" />
+    </dialog>
+
+</navigation>

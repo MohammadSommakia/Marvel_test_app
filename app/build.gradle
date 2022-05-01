@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
+}
+
+apply from: "$rootProject.projectDir/scripts/default_android_config.gradle"
+apply from: "$rootProject.projectDir/scripts/default_dependencies.gradle"
+apply from: "$rootProject.projectDir/scripts/sources.gradle"
+
+android {
+
+    defaultConfig {
+        applicationId "com.mylivn.test"
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+
+    implementation libraries.navigation
+    implementation 'androidx.startup:startup-runtime:1.1.1'
+
+
+    androidTestImplementation testLibraries.espresso
+
+    // These libraries required for Dagger
+    implementation libraries.retrofit
+    implementation libraries.gson
+    implementation libraries.okHttp
+    implementation libraries.workManager
+    implementation project(':commons')
+    implementation project(':data')
+    implementation project(':domain')
+    implementation project(':features:feed')
+
+    kotlin.sourceSets.all {
+        languageSettings.optIn("kotlin.RequiresOptIn")
+    }
+}
